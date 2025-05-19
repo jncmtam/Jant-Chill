@@ -1,15 +1,18 @@
-// frontend/src/index.js
+const playPauseBtn = document.getElementById('play-pause');
+const playIcon = document.getElementById('play-icon');
+const pauseIcon = document.getElementById('pause-icon');
 
-async function chatWithAI(text) {
-  const response = await fetch('http://localhost:8000/chat/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text }),
-  });
-  const data = await response.json();
-  console.log('AI Response:', data.response);
-  return data.response;
-}
+let isPlaying = false;
 
-// Example usage
-chatWithAI("Hello, virtual character!").then(console.log);
+playPauseBtn.addEventListener('click', () => {
+  isPlaying = !isPlaying;
+  if (isPlaying) {
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'block';
+    // TODO: start playing music
+  } else {
+    playIcon.style.display = 'block';
+    pauseIcon.style.display = 'none';
+    // TODO: pause music
+  }
+});

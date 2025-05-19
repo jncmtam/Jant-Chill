@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="index.js"></script>
+    <title>Jant Home</title>
+  </head>
+  <body>
+    <div class="study-page">
+      <div class="header">
+        <div id="left-header"></div>
+        <div id="right-header"></div>
+      </div>
+      <div class="content">
+        <div id="left-sidebar">
+          <div id="up">
+            <div id="bg"></div>
+            <div id="sound"></div>
+          </div>
+          <div id="down"></div>
+        </div>
+        <div id="main-content">
+          <div id="avt-music" style="color: white; margin: 24px"></div>
+        </div>
+      </div>
+      <div class="music-bar">
+        <button id="prev" aria-label="Previous Track">
+          <!-- Left Arrow SVG -->
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15 18l-6-6 6-6v12z" />
+          </svg>
+        </button>
+
+        <button id="play-pause" aria-label="Play/Pause">
+          <!-- Play Icon SVG -->
+          <svg
+            id="play-icon"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <svg
+            id="pause-icon"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            style="display: none"
+          >
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+
+        <button id="next" aria-label="Next Track">
+          <!-- Right Arrow SVG -->
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 6l6 6-6 6V6z" />
+          </svg>
+        </button>
+
+        <input
+          type="range"
+          id="progress-bar"
+          min="0"
+          max="100"
+          value="0"
+          aria-label="Music progress"
+        />
+
+        <button id="volume" aria-label="Volume">
+          <!-- Volume Icon SVG -->
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 9v6h4l5 5V4L7 9H3z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

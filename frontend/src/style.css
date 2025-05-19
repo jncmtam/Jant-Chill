@@ -1,0 +1,143 @@
+:root {
+  --babyblue: #89cff0;
+}
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.study-page {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr 8fr 1.2fr;
+  /* background-image: url("../public/assets/bg_study.jpg"); */
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+.study-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.header {
+  margin: 10px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  gap: 50em;
+  background-color: transparent;
+  margin-bottom: 0px;
+}
+.music-bar {
+  z-index: 1;
+  margin: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+}
+#left-sidebar {
+  margin: 24px;
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+  background-color: transparent;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 12px;
+}
+#up,
+#down {
+  background-color: white;
+  border-radius: 12px;
+}
+#up {
+  margin-bottom: 10px;
+}
+#down {
+  margin-bottom: 24px;
+  margin-top: 5px;
+}
+#main-content {
+  position: relative;
+}
+#avt-music {
+  border-color: black 2px;
+  border-radius: 12px;
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  top: 22em;
+  left: 67.5em;
+  background-image: url("../public/assets/billie.png");
+  background-position: center;
+  background-size: cover;
+}
+#left-header,
+#right-header {
+  border-radius: 12px;
+  background-color: white;
+}
+.music-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background-color: #222;
+  border-radius: 12px;
+  color: white;
+  user-select: none;
+}
+
+.music-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.music-bar button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.music-bar input[type="range"] {
+  flex-grow: 1;
+  height: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  background: #444;
+  -webkit-appearance: none;
+}
+
+.music-bar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+.music-bar input[type="range"]:focus {
+  outline: none;
+}
