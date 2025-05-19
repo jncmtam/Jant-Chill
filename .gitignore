@@ -23,4 +23,5 @@ build/
 dist/
 .DS_Store
 Thumbs.db
-
+actions-runner/
+.github/
